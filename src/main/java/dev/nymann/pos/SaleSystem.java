@@ -10,6 +10,10 @@ public class SaleSystem {
     }
 
     public void onBarcode(String barcode) {
+        if (barcode == null) {
+            display.display("Read error");
+            return;
+        }
         display.display(this.itemCatalog.getPrice(barcode));
     }
 
