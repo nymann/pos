@@ -3,11 +3,11 @@ package dev.nymann.pos;
 public class Display {
     private String text = "";
 
-    public String showText() {
+    public String read() {
         return text;
     }
 
-    public void setText(String displayText) {
-        text = displayText;
+    public void display(String text) {
+        this.text = text;
     }
 }

@@ -1,16 +1,16 @@
 package dev.nymann.pos;
 
-public class BarcodeEventHandler {
+public class SaleSystem {
     private final Display display;
     private final ItemCatalog itemCatalog;
 
-    public BarcodeEventHandler(Display display) {
+    public SaleSystem(Display display) {
         itemCatalog = new ItemCatalog();
         this.display = display;
     }
 
     public void onBarcode(String barcode) {
-        display.setText(this.itemCatalog.getPrice(barcode));
+        display.display(this.itemCatalog.getPrice(barcode));
     }
 
 }

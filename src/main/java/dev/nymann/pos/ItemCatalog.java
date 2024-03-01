@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class ItemCatalog {
-    private Map<String, String> inventory;
+    private final Map<String, String> inventory;
 
     public ItemCatalog() {
         this.inventory = new HashMap<>();
