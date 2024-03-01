@@ -10,7 +10,7 @@ public class SaleSystem {
     }
 
     public void onBarcode(String barcode) {
-        if (barcode == null) {
+        if (barcode == null || barcode.isEmpty()) {
             display.display("Read error");
             return;
         }

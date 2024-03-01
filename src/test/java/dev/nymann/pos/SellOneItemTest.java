@@ -39,6 +39,11 @@ class SellOneItemTest {
         sale.onBarcode(null);
         Assertions.assertEquals("Read error", display.read());
     }
+    @Test
+    void When_barcodeIsEmpty_thenShowReadErrorOnDisplay() {
+        sale.onBarcode("");
+        Assertions.assertEquals("Read error", display.read());
+    }
 
     @Test
     void When_anotherProductIsFound_thenDisplayThePrice() {
