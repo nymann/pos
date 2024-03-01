@@ -1,15 +1,18 @@
 package dev.nymann.pos;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ItemCatalog {
+    private Map<String, String> inventory;
+
+    public ItemCatalog() {
+        this.inventory = new HashMap<>();
+        this.inventory.put("12345", "$7.95");
+        this.inventory.put("23456", "$12.95");
+    }
+
     public String getPrice(String barcode) {
-        String price;
-        if ("12345".equals(barcode)) {
-            price = "7.95$";
-        } else if ("23456".equals(barcode)) {
-            price = "12.95$";
-        } else {
-            throw new RuntimeException(barcode + " not found in inventory");
-        }
-        return price;
+        return this.inventory.getOrDefault(barcode, barcode + " is not registered");
     }
 }
