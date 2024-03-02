@@ -4,8 +4,8 @@ public class CashRegister {
     private final Display display;
     private final ItemCatalog itemCatalog;
 
-    public CashRegister(Display display) {
-        itemCatalog = new ItemCatalog();
+    public CashRegister(Display display, ItemCatalog itemCatalog) {
+        this.itemCatalog = itemCatalog;
         this.display = display;
     }
 

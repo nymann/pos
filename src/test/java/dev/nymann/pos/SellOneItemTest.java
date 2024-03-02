@@ -11,7 +11,10 @@ class SellOneItemTest {
     @BeforeEach
     void setUp() {
         display = new Display();
-        sale = new CashRegister(display);
+        ItemCatalog itemCatalog = new ItemCatalog();
+        itemCatalog.add("12345", "$7.95");
+        itemCatalog.add("23456", "$12.95");
+        sale = new CashRegister(display, itemCatalog);
     }
 
     @Test
@@ -39,6 +42,7 @@ class SellOneItemTest {
         sale.onBarcode(null);
         Assertions.assertEquals("Read error", display.read());
     }
+
     @Test
     void When_barcodeIsEmpty_thenShowReadErrorOnDisplay() {
         sale.onBarcode("");
