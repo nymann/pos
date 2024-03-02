@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 
 class SellOneItemTest {
     private Display display;
-    private SaleSystem sale;
+    private CashRegister sale;
 
     @BeforeEach
     void setUp() {
         display = new Display();
-        sale = new SaleSystem(display);
+        sale = new CashRegister(display);
     }
 
     @Test

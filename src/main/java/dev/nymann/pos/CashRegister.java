@@ -1,10 +1,10 @@
 package dev.nymann.pos;
 
-public class SaleSystem {
+public class CashRegister {
     private final Display display;
     private final ItemCatalog itemCatalog;
 
-    public SaleSystem(Display display) {
+    public CashRegister(Display display) {
         itemCatalog = new ItemCatalog();
         this.display = display;
     }
